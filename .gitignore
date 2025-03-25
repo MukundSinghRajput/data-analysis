@@ -1,2 +1,4 @@
+analysis/
+*.pyc
+__pycache__/
 .venv
-analysis
