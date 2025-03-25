@@ -36,9 +36,8 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          # Only add specific files if needed, e.g., Hypermart_cleaned.csv
-          git add analysis/Hypermart_cleaned.csv || echo "No cleaned CSV to commit"
-          git commit -m "Auto update cleaned CSV from GitHub Actions" || echo "No changes to commit"
+          git add . || echo "No changes to commit"
+          git commit -m "analysis" || echo "No changes to commit"
 
       - name: Push changes (optional)
         uses: ad-m/github-push-action@master
